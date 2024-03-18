@@ -14,10 +14,10 @@ class Animal:
     def totalPorTipo(cls):
         cadena = "Mamiferos : " + str(len(zooAnimales.mamifero.Mamifero.getListado()))+"\nAves : " + str(len(zooAnimales.ave.Ave.getListado()))+"\nReptiles : " + str(len(zooAnimales.reptil.Reptil.getListado())) +"\nPeces : " + str(len(zooAnimales.pez.Pez.getListado()))+"\nAnfibios : " + str(len(zooAnimales.anfibio.Anfibio.getListado()))
         return cadena
-    def __str__(self):
+    def toString(self):
         statement = ""
         if self._zona== None:
-            statement = "Mi nombre es "+ self._nombre+", tengo una edad de "+ self._edad+", habito en "+ self._habitat+ " y mi genero es "+self._genero
+            statement = "Mi nombre es "+ str(self._nombre)+", tengo una edad de "+ str(self._edad)+", habito en "+ self._habitat+ " y mi genero es "+self._genero
         else :
             statement = "Mi nombre es "+ self._nombre+", tengo una edad de "+ self._edad+", habito en "+ self._habitat+ " y mi genero es "+self._genero+", la zona en la que me ubico es "+self._zona.getNombre()+" en el "+self._zona.getZoo().getNombre()
         return statement
