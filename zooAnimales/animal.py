@@ -1,8 +1,4 @@
-from zooAnimales.mamifero import Mamifero
-from zooAnimales.pez import Pez
-from zooAnimales.reptil import Reptil
-from zooAnimales.anfibio import Anfibio
-from zooAnimales.ave import Ave
+import zooAnimales
 
 class Animal:
     _totalAnimales = 0
@@ -12,11 +8,11 @@ class Animal:
         self._habitat = habitat
         self._genero = genero
         self._zona = None
-        _totalAnimales+= 1
+        Animal._totalAnimales+= 1
 
     @classmethod
     def totalPorTipo(cls):
-        cadena = "Mamiferos : " + len(Mamifero.getListado())+"\nAves : " + len(Ave.getListado())+"\nReptiles : " + len(Reptil.getListado()) +"\nPeces : " + len(Pez.getListado())+"\nAnfibios : " + len(Anfibio.getListado())
+        cadena = "Mamiferos : " + str(len(zooAnimales.mamifero.Mamifero.getListado()))+"\nAves : " + str(len(zooAnimales.ave.Ave.getListado()))+"\nReptiles : " + str(len(zooAnimales.reptil.Reptil.getListado())) +"\nPeces : " + str(len(zooAnimales.pez.Pez.getListado()))+"\nAnfibios : " + str(len(zooAnimales.anfibio.Anfibio.getListado()))
         return cadena
     def __str__(self):
         statement = ""

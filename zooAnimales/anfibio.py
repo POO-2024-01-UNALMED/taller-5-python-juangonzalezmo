@@ -1,4 +1,4 @@
-from zooAnimales.animal import Animal
+from .animal import Animal
 
 class Anfibio(Animal):
     _listado = []
@@ -22,7 +22,7 @@ class Anfibio(Animal):
         return self._colorPiel
     def setVenenoso(self,venenoso):
         self._venenoso = venenoso
-    def getVenenoso(self):
+    def isVenenoso(self):
         return self._venenoso
     @classmethod
     def cantidadAnfibios(cls):
