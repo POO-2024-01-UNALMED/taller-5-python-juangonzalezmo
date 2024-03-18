@@ -1,6 +1,3 @@
-from gestion.zona import Zona
-from gestion.zoologico import Zoologico
-from zooAnimales.animal import Animal
 from zooAnimales.mamifero import Mamifero
 from zooAnimales.pez import Pez
 from zooAnimales.reptil import Reptil
